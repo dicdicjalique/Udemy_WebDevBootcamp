@@ -1,57 +1,56 @@
 var numSquares = 6;
-var squares = document.querySelectorAll(".square");
-var colors = generateColors(numSquares);
-var pickedColor = randomizeColor();
-var pickedColorDisplay = document.querySelector("#pickedColor");
-pickedColorDisplay.textContent = pickedColor;
+var colors = [];
+var pickedColor;
 
+var squares = document.querySelectorAll(".square");
+var pickedColorDisplay = document.querySelector("#pickedColor");
 var header = document.querySelector("#header");
 var message = document.querySelector("#message");
 var resetButton = document.querySelector("#reset");
+var modeButtons = document.querySelectorAll(".mode");
 
-var gameModeIsHard = true;
+init();
 
-var easyButton = document.querySelector("#easy");
-easyButton.addEventListener("click", function() {
-    hardButton.classList.remove("selected");
-    easyButton.classList.add("selected");
-    numSquares = 3;
-    resetGame();
+function init() {
+    // Mode buttons event listeners
+    for (var i = 0; i < modeButtons.length; i++) {
+        modeButtons[i].addEventListener("click", function() {
+            modeButtons[0].classList.remove("selected");
+            modeButtons[1].classList.remove("selected");
+            this.classList.add("selected");
 
-    gameModeIsHard = false;
-});
+            this.textContent === "Easy" ? numSquares = 3 : numSquares = 6;
+            resetGame();
+        });
+    }
 
-var hardButton = document.querySelector("#hard");
-hardButton.addEventListener("click", function() {
-    easyButton.classList.remove("selected");
-    hardButton.classList.add("selected");
-    numSquares = 6;
-    resetGame();
+    // Setup squares
+    for (var i = 0; i < squares.length; i++) {
+        squares[i].addEventListener("click", function() {
+            // compare square color to picked color
+            var clickedColor = this.style.backgroundColor;
+            if(clickedColor === pickedColor) {
+                changeColors(pickedColor);
+                header.style.backgroundColor = pickedColor;
+                message.textContent = "Correct";
+                resetButton.textContent = "Play Again?"
+            } else {
+                message.textContent = "Try Again";
+                this.style.backgroundColor = "#232323";
+            }
+        });
+    }
 
-    gameModeIsHard = true;
-});
-
-resetButton.addEventListener("click", function() {
-    resetGame();
-});
-
-for (var i = 0; i < squares.length; i++) {
-    squares[i].style.backgroundColor = colors[i];
-
-    squares[i].addEventListener("click", function() {
-        // compare square color to picked color
-        var clickedColor = this.style.backgroundColor;
-        if(clickedColor === pickedColor) {
-            changeColors(pickedColor);
-            header.style.backgroundColor = pickedColor;
-            message.textContent = "Correct";
-            resetButton.textContent = "Play Again?"
-        } else {
-            message.textContent = "Try Again";
-            this.style.backgroundColor = "#232323";
-        }
+    // Add reset button listener
+    resetButton.addEventListener("click", function() {
+        resetGame();
     });
+
+    // Call reset
+    resetGame();
 }
+
+
 
 function changeColors(color) {    
     for (var j = 0; j < squares.length; j++) {

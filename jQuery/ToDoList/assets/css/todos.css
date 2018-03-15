@@ -1,0 +1,121 @@
+/* html {
+    height: 100%;
+} */
+
+body {
+    /* background: url("https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    background: #2BC0E4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: Roboto;
+}
+
+input {
+    font-size: 18px;
+    color: #2980E9;
+    background-color: #f7f7f7;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    border: 3px solid rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    outline: none;
+    transition: border 0.2s;
+    -moz-transition: border 0.2s;
+    -webkit-transition: border 0.2s;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+
+li:nth-child(2n) {
+    background-color: #f7f7f7;
+}
+
+.fa-plus-square {
+    padding: 2px 0;
+    transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    -webkit-transition: color 0.2s;
+}
+
+.fa-plus-square:hover {
+    color: rgb(184, 184, 184);
+    transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    -webkit-transition: color 0.2s;
+}
+
+input:focus {
+    background-color: white;
+    border: 3px solid #2980E9;
+    transition: border 0.2s;
+    -moz-transition: border 0.2s;
+    -webkit-transition: border 0.2s;
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.delete {
+    background-color: #e74c3c;
+    height: 40px;
+    width: 0; /* for hovering */
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+li:hover .delete {
+    width: 40px;
+    opacity: 1;
+    transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+li .delete:hover {
+    background-color: #cc4134;
+} 
+
+#container {
+    width: 360px;
+    margin: 100px auto;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+#container h1 {
+    background-color: #2980E9;
+    color: white;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#container .fa-plus-square {
+    float: right;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Patatap Clone</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/js/paper-full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.core.min.js"></script>
+
+    <!-- Define inlined PaperScript associate it with myCanvas -->
+    <script type="text/paperscript" canvas="myCanvas">
+
+        var circlesArray = [];
+        function onKeyDown(event) {
+            var maxPoint = new Point(view.size.width, view.size.height);
+            var randomPoint = Point.random();
+            var point = maxPoint * randomPoint;
+
+            var circle = new Path.Circle(point, 500);
+            circle.fillColor = keyData[event.key].color;
+            keyData[event.key].sound.play();
+            circlesArray.push(circle);
+        }        
+        
+        function onFrame(event) {
+            for(var i = 0; i < circlesArray.length; i++) {
+                // Each frame, change the fill color of the path slightly by
+                // adding 1 to its hue:
+                circlesArray[i].fillColor.hue += 1;
+                circlesArray[i].scale(0.9);
+
+                if(circlesArray[i].area < 1) {
+                    circlesArray[i].remove();
+                    circlesArray.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="myCanvas" resize></canvas>
+    <script type="text/javascript" src="assets/js/data.js"></script>
+</body>
+</html>

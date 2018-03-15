@@ -8,12 +8,20 @@ body {
     background-position: fixed;
 }
 
+body div {    
+    font-family: 'Muli', sans-serif;
+}
+
 #main-info .row, 
 #main-skills .row,
 #main-portfolio .row,
 #main-hobbies .row {
     margin: 0 auto;
     max-width: 1200px;
+}
+
+.main-row {    
+    box-shadow: 0px 0px 8px #888888;
 }
 
 #main-info, #main-skills, #main-portfolio, #main-hobbies {
@@ -27,7 +35,13 @@ body {
     #main-info, #main-skills, #main-portfolio, #main-hobbies {
         height: 100%;
     }
+
+    #main-skills #skills,
+    #main-skills #experience {
+        height: 50%;
+    }
 }
+
 #main-info-row, 
 #main-skills-row, 
 #main-portfolio-row, 
@@ -68,20 +82,20 @@ body {
 #main-info #links .row {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100.01%; /* With extra .01% to cover ~1px background excess */
 }
 
 #main-info .link-item {
     bottom: 0;
     min-height: 70px;
     text-align: center;
+    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
 }
 
 #main-info .link-item svg {
     width: 2em;
-    /* height: 60%; */
     min-width: 20px;
     max-width: 60px;
     margin: auto;
@@ -91,25 +105,43 @@ body {
 #main-info #gmail {
     background-color: #1abc9c;
 }
+#main-info #gmail:hover {
+    background-color: #16a085;
+}
 
 #main-info #linkedin {
     background-color: #3498db;
+}
+#main-info #linkedin:hover {
+    background-color: #2381c3;
 }
 
 #main-info #instagram {
     background-color: #9b59b6;
 }
+#main-info #instagram:hover {
+    background-color: #8546a0;
+}
 
 #main-info #skills {
+    background-color: #c96b17;
+}
+#main-info #skills:hover {
     background-color: #e67e22;
 }
 
 #main-info #portfolio {
     background-color: #e74c3c;
 }
+#main-info #portfolio:hover {
+    background-color: #dd2d1b;
+}
 
 #main-info #hobbies {
     background-color: #d9a81d;
+}
+#main-info #hobbies:hover {
+    background-color: #b88d18;
 }
 
 /* Skills/Experience Section */
@@ -123,6 +155,22 @@ body {
 
 #main-skills #experience {
     background-color: #efefef;
+}
+
+#main-skills #experience ul {
+    border-left: 1px dashed #3c3c3c;
+    margin: 0;
+    padding: 15px 0 15px 16px;
+}
+
+#main-skills #experience .date,
+#main-skills #experience .position  {
+    list-style: none;
+    font-size: 13px;
+}
+
+#main-skills #experience li {
+    font-size: 18px;
 }
 
 /* Portfolio Section */
@@ -141,4 +189,15 @@ body {
 
 #main-hobbies #hobbies-list{
     background-color: #e74c3c;
+}
+
+.center {
+    display: table;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.center h1 {
+    text-align: center;
+    padding: 20px;
 }

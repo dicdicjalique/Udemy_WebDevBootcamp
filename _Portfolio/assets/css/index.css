@@ -208,6 +208,8 @@ body div h1 {
 
 #portfolio-header {
     height: 25%;
+    display: table;
+    margin: auto;
 }
 
 #portfolio-info .row {

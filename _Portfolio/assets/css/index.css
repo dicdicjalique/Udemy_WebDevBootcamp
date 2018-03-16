@@ -12,6 +12,22 @@ body div {
     font-family: 'Muli', sans-serif;
 }
 
+body div h1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.center {
+    display: table;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.center h1 {
+    text-align: center;
+    padding: 20px;
+}
+
 #main-info .row {
     margin: 0 auto;
     max-width: 1200px;
@@ -168,11 +184,6 @@ body div {
     font-size: 0.8em;
 }
 
-#main-skills #experience h1 {
-    font-size: 1.8em;
-    text-transform: uppercase;
-}
-
 #main-skills #experience li {
     font-size: 1.1em;
 }
@@ -195,15 +206,12 @@ body div {
     background-color: #e74c3c;
 }
 
-.center {
-    display: table;
-    margin: auto;
-    padding: 20px 0;
+#portfolio-header {
+    height: 25%;
 }
 
-.center h1 {
-    text-align: center;
-    padding: 20px;
+#portfolio-info .row {
+    height: 25%;
 }
 
 .portfolio-item {

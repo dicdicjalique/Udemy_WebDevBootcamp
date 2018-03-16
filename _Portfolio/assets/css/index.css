@@ -124,10 +124,10 @@ body div {
 }
 
 #main-info #skills {
-    background-color: #c96b17;
+    background-color: #e67e22;
 }
 #main-info #skills:hover {
-    background-color: #e67e22;
+    background-color: #c96b17;
 }
 
 #main-info #portfolio {

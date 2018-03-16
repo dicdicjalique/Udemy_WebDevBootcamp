@@ -159,17 +159,22 @@ body div {
 #main-skills #experience ul {
     border-left: 1px dashed #3c3c3c;
     margin: 0;
-    padding: 15px 0 15px 16px;
+    padding: 0.6em 0 0.6em 16px;
 }
 
 #main-skills #experience .date,
 #main-skills #experience .position  {
     list-style: none;
-    font-size: 13px;
+    font-size: 0.8em;
+}
+
+#main-skills #experience h1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
 }
 
 #main-skills #experience li {
-    font-size: 18px;
+    font-size: 1.1em;
 }
 
 /* Portfolio Section */

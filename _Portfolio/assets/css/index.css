@@ -12,10 +12,7 @@ body div {
     font-family: 'Muli', sans-serif;
 }
 
-#main-info .row, 
-#main-skills .row,
-#main-portfolio .row,
-#main-hobbies .row {
+#main-info .row {
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -47,6 +44,8 @@ body div {
 #main-portfolio-row, 
 #main-hobbies-row {
     height: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 #main-info hr {
@@ -200,4 +199,17 @@ body div {
 .center h1 {
     text-align: center;
     padding: 20px;
+}
+
+.portfolio-item {
+    background-color: red;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pair-row {
+    height: 50%;
+    margin: 0;
+    padding: 0;
 }

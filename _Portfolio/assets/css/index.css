@@ -234,4 +234,5 @@ body div h1 {
     background: url(../images/port1.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }

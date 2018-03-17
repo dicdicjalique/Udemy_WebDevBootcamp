@@ -39,7 +39,9 @@ body div h1 {
     }
 
     #main-skills #skills,
-    #main-skills #experience {
+    #main-skills #experience,
+    #main-portfolio #portfolio-info,
+    #main-portfolio #portfolio-list {
         height: 50%;
     }
 }
@@ -228,21 +230,19 @@ body div h1 {
     height: 100%;
     margin: 0;
     padding: 0;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);  
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%); 
 }
 
-.portfolio-item:hover {
+.portfolio-item:hover,
+.row .selected {    
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);  
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
 }
 
 .pair-row {
@@ -267,9 +267,6 @@ body div h1 {
     background-repeat: no-repeat;
     background-position: center;
     background-color: maroon;
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);  
 }
 
 #ejk-watch {
@@ -306,4 +303,23 @@ body div h1 {
     background-repeat: no-repeat;
     background-position: center;
     background-color: violet;
+}
+
+#connect-up-info {
+    /* display: none; */
+}
+#cpu-tax-calc-info {
+    display: none;
+}
+#ejk-watch-info {
+    display: none;
+}
+#envi-defenders-info {
+    display: none;
+}
+#hungry-games-info {
+    display: none;
+}
+#grabeteh-info {
+    display: none;
 }

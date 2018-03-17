@@ -185,7 +185,9 @@ body div h1 {
 }
 
 #main-portfolio #portfolio-list{
-    background-color: #3498db;
+    background-color: #3c3c3c;
+    margin: 0;
+    padding: 0;
 }
 
 /* Hobbies Section */
@@ -304,9 +306,11 @@ body div h1 {
     background-position: center;
     background-color: violet;
 }
-
-#connect-up-info {
-    /* display: none; */
+#connect-up-info,
+#cpu-tax-calc-info {
+    height: 100%;
+    display: table;
+    padding: 0 3%;
 }
 #cpu-tax-calc-info {
     display: none;
@@ -322,4 +326,31 @@ body div h1 {
 }
 #grabeteh-info {
     display: none;
+}
+
+#portfolio-list p {
+    text-align: justify;
+    margin: 0;
+}
+
+#portfolio-list .portfolio-title-wrapper {
+    height: 25%;
+    width: 100%;
+    display: table;
+    text-align: center;
+}
+
+#portfolio-list h1 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#portfolio-list .images {
+    float: right;
+    margin: 5px 0 2px 10px;
+}
+
+#portfolio-list img {
+    width: 13em;
+    box-shadow: 1px 1px 2px #333;
 }

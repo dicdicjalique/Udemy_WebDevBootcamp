@@ -42,7 +42,7 @@ function showPortfolioContent(clickedButton) {
             content.style.display = "none";
             button.classList.remove("selected");
         } else {
-            content.style.display = "block";
+            content.style.display = "table";
             button.classList.add("selected");
         }
     });

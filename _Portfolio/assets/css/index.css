@@ -207,9 +207,14 @@ body div h1 {
 }
 
 #portfolio-header {
-    height: 25%;
+    height: 25.01%;
     display: table;
     margin: auto;
+}
+
+#portfolio-header h1 {
+    display:table-cell; 
+    vertical-align:middle;
 }
 
 #portfolio-info .row {
@@ -221,6 +226,21 @@ body div h1 {
     height: 100%;
     margin: 0;
     padding: 0;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);  
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+}
+
+.portfolio-item:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);  
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
 }
 
 .pair-row {
@@ -231,8 +251,57 @@ body div h1 {
 
 #cpu-tax-calc {
     padding: 0;
-    background: url(../images/port1.png);
-    background-size: cover;
+    background: url(../images/logo_cpu.png);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: purple;  
+}
+
+#connect-up {
+    padding: 0;
+    background: url(../images/logo_connect.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: maroon;
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);  
+}
+
+#ejk-watch {
+    padding: 0;
+    background: url(../images/logo_ejk.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: whitesmoke;
+}
+
+#envi-defenders {
+    padding: 0;
+    background: url(../images/logo_envi.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: darkolivegreen;
+}
+
+#hungry-games {
+    padding: 0;
+    background: url(../images/logo_hungry.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: orange;
+}
+
+#grabeteh {
+    padding: 0;
+    background: url(../images/logo_grabeteh.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: violet;
 }

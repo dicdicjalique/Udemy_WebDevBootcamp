@@ -17,17 +17,6 @@ body div h1 {
     text-transform: uppercase;
 }
 
-.center {
-    display: table;
-    margin: auto;
-    padding: 20px 0;
-}
-
-.center h1 {
-    text-align: center;
-    padding: 20px;
-}
-
 #main-info .row {
     margin: 0 auto;
     max-width: 1200px;
@@ -206,15 +195,28 @@ body div h1 {
     background-color: #e74c3c;
 }
 
+#experience-header,
 #portfolio-header {
-    height: 25.01%;
+    height: 25%;
     display: table;
     margin: auto;
 }
 
+#experience-header h1,
 #portfolio-header h1 {
+    display: table-cell; 
+    vertical-align: middle;
+}
+
+#experience-contents {
+    display: table;
+    margin: auto;
+    padding: 20px 0;
+}
+
+#experience-ul {
     display:table-cell; 
-    vertical-align:middle;
+    vertical-align: top;
 }
 
 #portfolio-info .row {
